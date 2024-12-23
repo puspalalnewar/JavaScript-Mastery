@@ -10,19 +10,67 @@ const companies = [
     { name: "Company Nine", category: "Retail", start: 1981, end: 1989 }
 ];
 
-const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
+const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32, 18];
 
-// Printing all the companies details using forEach loop
+// Map()----------------------------------------------->
+// map() creates a new array from calling a function for every array element.
+// map() does not execute the function for empty elements.
+// map() does not change the original array.
+// Syntax
+// array.map(function(currentValue, index, arr), thisValue)
+
+// let data = companies.map(function(e){
+//     return e;
+// })
+// console.log(data);
+
+// let companiesName = companies.map((ele, idx, arr)=>{
+//     return ele.name;
+// })
+// console.log(companiesName);
+
+let testMap = companies.map(function(company){
+    return `${company.name} [${company.start} - ${company.end}]`
+})
+console.log(testMap);
+
+
+// filter()---------------------------------------------->
+// let retail = companies.filter((company)=>{
+//     if(company.category == "Retail"){
+//         return company;
+//     }
+// })
+// console.log(retail);
+
+// let canDrink = ages.filter(function(e){
+//     if(e >= 21){
+//         return e;
+//     }
+// });
+// console.log(canDrink);
+
+// let canDrink = [];
+// for(let i = 0; i<ages.length; i++){
+//     if(ages[i] >= 18){
+//         canDrink.push(ages[i]);
+//     }
+// }
+// console.log(canDrink);
+
+
+
+// Printing all the companies details using forEach loop -------------------------------->
 // companies.forEach(element => {
 //     console.log(element);
 // });
 
-companies.forEach(function printEle(e){
-    console.log(e);
-})
+// companies.forEach(function printEle(e){
+//     console.log(e);
+// })
 
 
-// Printing all the companies details using for loop
+// Printing all the companies details using for loop ------------------>
 // for(let i = 0; i<companies.length; i++){
 //     console.log(companies[i]); 
 // }
